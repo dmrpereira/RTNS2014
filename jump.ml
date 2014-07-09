@@ -1,0 +1,1 @@
+| Pbtbl(r, tbl) ->  fprintf oc "	mov	r14, %a, lsl #2\n" ireg r;  fprintf oc "	ldr	pc, [pc, r14]\n";  fprintf oc "	mov	r0, r0\n"; (* no-op *)  List.iter    (fun l -> fprintf oc "	.word	%a\n" print_label l)    tbl;  3 + List.length tbl

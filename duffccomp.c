@@ -1,0 +1,1 @@
+int duff_ccomp(int count) {	int n = (count + 7) / 8;	int c = 0;	switch(count % 8) {	case 0:	    break;	case 7:		func(&c);	case 6:		func(&c);	case 5:		func(&c);	case 4:		func(&c);	case 3:		func(&c);	case 2:		func(&c);	case 1:		func(&c);	} 	while (--n > 0) {	func(&c);	func(&c);	func(&c);	func(&c);	func(&c);	func(&c);	func(&c);	func(&c);	}	return c;}
